@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 })
 export class ApiService {
 server:string  = "https://softkleen.com.br/web/api/";
+//server:string  = "http://localhost/api/";
   constructor(private http: HttpClient ) { }
 
 connectApi(dados:any, nomeApi:string){

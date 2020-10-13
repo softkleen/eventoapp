@@ -12,15 +12,16 @@
   <ion-list>
     <ion-item>
       <ion-label position="floating">Data</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="data"></ion-datetime>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="data" min="2020" max="2022"></ion-datetime>
     </ion-item>
     <ion-item>
       <ion-label position="floating" placeholder="Selecione">Evento</ion-label>
-      <ion-select [(ngModel)]="nome_evento">
-        <ion-select-option value="encontro_jovens">Encontro jovens</ion-select-option>
-        <ion-select-option value="festa_infantil">Festa Infatil</ion-select-option>
-        <ion-select-option value="culto">Culto</ion-select-option>
-        <ion-select-option value="coral">Coral</ion-select-option>
+      <ion-select [(ngModel)]="nome">
+        <ion-select-option value="Encontro jovens">Encontro jovens</ion-select-option>
+        <ion-select-option value="Festa infantil">Festa Infatil</ion-select-option>
+        <ion-select-option value="Culto">Culto</ion-select-option>
+        <ion-select-option value="Coral">Coral</ion-select-option>
+        <ion-select-option value="Palestra">Palestra</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
@@ -29,7 +30,7 @@
     </ion-item>
    
   </ion-list>
-  <ion-button *ngIf="!id" color="success"  expand="full" (click)="adicionar()">Adicionar</ion-button>
+  <ion-button *ngIf="!id" color="success"  expand="full" (click)="addEvento()">Adicionar</ion-button>
   <ion-button *ngIf="id" expand="full">Editar</ion-button>
 
 
